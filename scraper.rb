@@ -1,8 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 class MovieScraper
-   url = "https://editorial.rottentomatoes.com/guide/essential-
-          movies-to-watch-now/"
+   url = "https://editorial.rottentomatoes.com/guide/essential-movies-to-watch-now/"
    html = open(url)
    doc = Nokogiri::HTML(html)
    movies = doc.css("div .row.countdown-item")
